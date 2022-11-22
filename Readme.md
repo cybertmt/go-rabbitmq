@@ -1,5 +1,7 @@
 ```
-$ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3-management
+docker run -d --hostname my-rabbit --name some-rabbit -p 0.0.0.0:8087:15672 -p 0.0.0.0:5672:5672 rabbitmq:3-management 
+
+docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 rabbitmq:3-management
 ```
 You can then go to http://localhost:8080 or http://host-ip:8080 in a browser.
 
