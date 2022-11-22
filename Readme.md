@@ -1,4 +1,9 @@
 ```
+$ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3-management
+```
+You can then go to http://localhost:8080 or http://host-ip:8080 in a browser.
+
+```
 docker run -it --rm --net rabbits -e RABBIT_HOST=rabbit-1 -e RABBIT_PORT=5672 -e RABBIT_USERNAME=guest -e RABBIT_PASSWORD=guest -p 8011:8011 publisher:develop
 ```
 ```
